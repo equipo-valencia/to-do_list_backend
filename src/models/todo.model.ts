@@ -27,6 +27,6 @@ Todo.init({
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
     }
 },{
-    tableName: 'todo',
+    tableName: 'todos',
     sequelize: database // Es donde decimos como conectanros a la base de datos
 })
