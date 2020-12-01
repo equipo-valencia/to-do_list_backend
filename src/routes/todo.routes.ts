@@ -11,7 +11,7 @@ class TodoRoutes {
         this.router.get('/', todoController.allPost);
         this.router.post('/', todoController.create);
         // this.router.put('/:id', todoController.update);
-        // this.router.delete('/:id', todoController.delete);
+        this.router.delete('/:id', todoController.delete);
 
     }
 }

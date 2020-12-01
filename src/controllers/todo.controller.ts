@@ -21,6 +21,7 @@ class TodoController {
         
         try{
             const request = req.body;
+            console.log(request);
             const newTodo = await Todo.create(request);
             res.json(newTodo);
 
@@ -28,6 +29,20 @@ class TodoController {
             res.json(error);
         }
     } 
+
+    public async delete (req: Request, res: Response) {
+
+        try{
+            const result = await Todo.destroy({
+                where:{
+                    id: req.params.id
+                }
+            })
+            res.send('todo borrado');
+        }catch (error) {
+            res.json(error);
+        }
+    }
 
 }
 
